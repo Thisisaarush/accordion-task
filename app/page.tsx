@@ -28,9 +28,11 @@ export default function Home() {
     },
   ]
 
-  const [activeAccordionId, setActiveAccordionId] = useState(null)
+  const [activeAccordionId, setActiveAccordionId] = useState<number | null>(
+    null,
+  )
 
-  const toggleAccordion = (id) => {
+  const toggleAccordion = (id: number | null) => {
     setActiveAccordionId(activeAccordionId === id ? null : id)
   }
 
